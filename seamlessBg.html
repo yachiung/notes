@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>製作無接縫重複底圖</title>
+
+  <style>
+    ol{ line-height: 1.8;}
+    ol>li{ margin-top: 1.5em;}
+    ol ul>li{ margin-top: 1em;}
+    img.bigImg{ width: 680px; display: block; margin: 10px 0; background-repeat: repeat-y;}
+    h1{ text-align: center; border-bottom: 4px solid #cde; padding: 1em 8% .2em; margin: 0 auto;}
+    article{width: 84%; margin: 0 auto; padding: 2em 0;}
+    article h2:not(:first-child){ margin-top: 4em;}
+  </style>
+</head>
+<body>
+  <h1>製作無接縫重複底圖</h1>
+  <article>
+    <h2>步驟簡要說明</h2>
+    <ol>
+      <li>使用 Photoshop 開啟圖檔</li>
+      <li>選擇「濾鏡／其他／畫面錯位」
+        <img src="publicData/截圖 2022-10-05 下午5.23.57.png" class="bigImg">
+      </li>
+      <li>對話框選項：
+        <img src="publicData/截圖 2022-10-05 下午5.26.44.png" class="bigImg">
+        <ul>
+          <li>「未定義區域」一定要選「折回重複」。</li>
+          <li>如果背景只要 repeat-y，水平數值輸入 0；如果只要 repeat-ｘ，垂直數值輸入 0。</li>
+          <li>理想的數值大約是圖檔寬或高的一半。</li>
+        </ul>
+      </li>
+      <li>用印章 <img src="publicData/tool_stamp.png" alt="Photoshop 印章工具"> 或其他合適的工具，把不連續的邊界修掉。小心四邊不要修改到。</li>
+      <li>如果要保留原背景圖的佈局，可以再執行一次「畫面錯位」功能，數值給為原值的負值。例如本來是 +500 +300 改成 -500 -300</li>
+      <li>背景的位置也可以 css 的 background-position 調整</li>
+    </ol>
+
+    <h2>重複貼背景圖範例</h2>
+    <ol>
+      <li><a href="bgSample01.html">原圖效果</a></li>
+      <li><a href="bgSample01a.html">調整後效果</a></li>
+    </ol>
+
+  </article>
+
+
+  
+</body>
+</html>
